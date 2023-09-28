@@ -17,11 +17,11 @@ export default {
 </script>
 
 <template>
+    
     <footer>
-       <button>
 
-       </button>
     </footer>
+
 </template>
 
 <style lang="scss" scoped>
