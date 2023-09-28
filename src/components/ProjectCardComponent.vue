@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-    <router-link :to="{ name:'projects', params: {id:singleProject.id}}">
+    <router-link @click="console.log(res)" :to="{ name:'project', params: {id:singleProject.id}}">
 
         <div  class="card h-100 bg-secondary text-light">
             <h2 class="card-title ">
