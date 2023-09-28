@@ -11,6 +11,9 @@ export default {
         
     },
     methods: {
+        getImagePath: function(image){
+            return new URL (image, import.meta.url).href;
+        }
 
     }
 }
@@ -22,7 +25,7 @@ export default {
             {{ singleProject.title }}
         </h2>
         <div class="card-body bg-dark">
-            <img v-if="singleProject.img != null" :src="'C:/MAMP/htdocs/Boolean/laravel-many-to-many/public/storage/'+singleProject.img" :alt="singleProject.title" class="card-img img-fluid">
+            <img v-if="singleProject.img != null" :src="singleProject.Full_Img" :alt="singleProject.title" class="card-img img-fluid">
 
             <div>
                 <h4>

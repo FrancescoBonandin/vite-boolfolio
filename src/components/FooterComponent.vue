@@ -7,14 +7,20 @@ export default {
         }
     },
     methods: {
-
+    
     }
+      
+        
+
+    
 }
 </script>
 
 <template>
     <footer>
-        FOOTER
+       <button>
+
+       </button>
     </footer>
 </template>
 
