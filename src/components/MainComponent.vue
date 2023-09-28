@@ -77,10 +77,12 @@ export default {
 <template>
     <main>
         <div class="container">
+
             <div class="row justify-content-between ">
+
                 <div v-for="project in projects" class="col-3 g-4">
                  
-                    <ProjectCardComponent   :singleProject="project" />
+                    <ProjectCardComponent :singleProject="project"/>
 
                 </div>
 
@@ -101,6 +103,7 @@ export default {
                 </button>
 
             </div>
+
         </div>
     </main>
 </template>
