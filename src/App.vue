@@ -22,7 +22,8 @@ export default {
     
     <HeaderComponent />
   
-    <MainComponent />
+    <!-- <MainComponent /> -->
+    <router-view></router-view>
   
     <FooterComponent />
     
