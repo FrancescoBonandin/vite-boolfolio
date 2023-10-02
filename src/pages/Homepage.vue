@@ -12,7 +12,7 @@ export default {
         return {
             projects:[],
             loader:false,
-            currentPage:null,
+            currentPage:1,
             lastPage:null,
 
 
