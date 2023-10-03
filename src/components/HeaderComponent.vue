@@ -16,7 +16,7 @@ export default {
     <header>
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col text-center bg-success text-white">
+                <div class="header-background col text-center  text-white">
                     <h1>
                         Lorem ipsum dolor sit amet.
                     </h1>

@@ -24,7 +24,7 @@ export default {
     <router-link @click="console.log(res)" :to="{ name:'project', params: {id:singleProject.id}}">
 
         <div  class="card h-100 bg-secondary text-light">
-            <h2 class="card-title ">
+            <h2 class="card-title text-center ">
                 {{ singleProject.title }}
             </h2>
             <div class="card-body bg-dark">

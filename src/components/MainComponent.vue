@@ -78,31 +78,61 @@ export default {
     <main>
         <div class="container">
 
-            <div class="row justify-content-between ">
+            <div class="row">
 
-                <div v-for="project in projects" class="col-3 g-4">
-                 
-                    <ProjectCardComponent :singleProject="project"/>
+                <div class="col-3">
+
+                    <ul class="navigation-menu">
+
+                        <li>
+                            <span>
+                                >
+                            </span>
+                            Front-end
+                        </li>
+                       
+                        <li>
+                            <span>
+                                >
+                            </span>
+                            Back-end
+                        </li>
+
+                    </ul>
 
                 </div>
 
-            </div>
+                <div class="col-9">
 
-            <div class="row justify-content-center mt-4">
+                    <div class="row justify-content-between ">
+        
+                        <div v-for="project in projects" class="col-3 g-4">
+                         
+                            <ProjectCardComponent :singleProject="project"/>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="row justify-content-center mt-4">
+        
+                        <button class="col-2" @click="changePage('-')">
+                            &laquo;previous
+                        </button>
+        
+                        <div class="col-3 text-center">
+                            {{ this.currentPage }}
+                        </div>
+        
+                        <button class="col-2" @click="changePage('+')">
+                            next&raquo;
+                        </button>
+        
+                    </div>
 
-                <button class="col-2" @click="changePage('-')">
-                    &laquo;previous
-                </button>
-
-                <div class="col-3 text-center">
-                    {{ this.currentPage }}
                 </div>
-
-                <button class="col-2" @click="changePage('+')">
-                    next&raquo;
-                </button>
-
             </div>
+
 
         </div>
     </main>

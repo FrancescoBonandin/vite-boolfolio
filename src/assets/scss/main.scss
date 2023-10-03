@@ -1,2 +1,10 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+.header-background{
+    background-color:rgba($color: #1b3979, $alpha: 1.0) ;
+}
+
+a{
+    text-decoration: none;
+}

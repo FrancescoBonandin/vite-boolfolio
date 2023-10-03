@@ -79,32 +79,63 @@ export default {
     <main>
         <div class="container">
 
-            <div class="row justify-content-between ">
+            <div class="row">
 
-                <div v-for="project in projects" class="col-3 g-4">
-                 
-                    <ProjectCardComponent :singleProject="project"/>
+                <aside class="col-3 sidebar">
 
+                    <ul class="navigation-menu">
+
+                        <li class="drop-menu">
+                            <span>></span>Front-end
+                        </li>
+                    
+                        <li class="drop-menu">
+                            <span>></span>Back-end
+                        </li>
+
+                    </ul>
+
+                </aside>
+
+                <div class="col-9">
+
+                    <div class="row justify-content-between ">
+        
+                        <div v-for="project in projects" class="col-3 g-4">
+                         
+                            <ProjectCardComponent :singleProject="project"/>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="row justify-content-center mt-4">
+        
+                        <button class="col-2" @click="changePage('-')">
+                            &laquo;previous
+                        </button>
+        
+                        <div class="col-3 text-center">
+                            {{ this.currentPage }}
+                        </div>
+        
+                        <button class="col-2" @click="changePage('+')">
+                            next&raquo;
+                        </button>
+        
+                    </div>
                 </div>
-
             </div>
 
-            <div class="row justify-content-center mt-4">
-
-                <button class="col-2" @click="changePage('-')">
-                    &laquo;previous
-                </button>
-
-                <div class="col-3 text-center">
-                    {{ this.currentPage }}
-                </div>
-
-                <button class="col-2" @click="changePage('+')">
-                    next&raquo;
-                </button>
-
-            </div>
 
         </div>
     </main>
 </template>
+
+<style lang="scss" scoped>
+.sidebar{
+    border: solid 1px rgba($color: #ad2537, $alpha: 1.0);
+}
+ 
+
+</style>
