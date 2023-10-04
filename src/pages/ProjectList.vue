@@ -43,7 +43,7 @@ export default {
 </script>
 <template>
     
-    <div class="container">
+    <div class="col">
         <div class="row">
             <div class="col">
 
@@ -59,7 +59,7 @@ export default {
                     <div class="card-body">
                         <div class="row">
                             <div v-if="project.Full_Img" class="col flex-shrink-1">
-                                <img :src="project.Full_Img" alt="no related image">
+                                <img :src="project.Full_Img" class="img-fluid" alt="no related image">
                             </div>
                             <div class="col flex-grow-1">
                                 <div class="row">
@@ -109,3 +109,15 @@ export default {
     </div>
 
 </template>
+
+<style lang="scss" scoped>
+ .col{
+    min-height: 100%;
+
+    .row,.card,.card-body{
+        min-height: 100%;
+    }
+
+ }
+
+</style>

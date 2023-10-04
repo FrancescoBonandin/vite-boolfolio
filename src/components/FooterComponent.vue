@@ -25,5 +25,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+footer{
+    min-height: 10vh;
+    background-color: black;
+}
 
 </style>

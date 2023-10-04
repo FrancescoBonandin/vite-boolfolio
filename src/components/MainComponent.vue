@@ -76,61 +76,27 @@ export default {
 
 <template>
     <main>
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
 
-                <div class="col-3">
+                <aside class="col-2 sidebar">
 
                     <ul class="navigation-menu">
 
-                        <li>
-                            <span>
-                                >
-                            </span>
-                            Front-end
+                        <li class="drop-menu">
+                            <span>></span>Front-end
                         </li>
-                       
-                        <li>
-                            <span>
-                                >
-                            </span>
-                            Back-end
+                    
+                        <li class="drop-menu">
+                            <span>></span>Back-end
                         </li>
 
                     </ul>
 
-                </div>
+                </aside>
 
-                <div class="col-9">
-
-                    <div class="row justify-content-between ">
-        
-                        <div v-for="project in projects" class="col-3 g-4">
-                         
-                            <ProjectCardComponent :singleProject="project"/>
-        
-                        </div>
-        
-                    </div>
-        
-                    <div class="row justify-content-center mt-4">
-        
-                        <button class="col-2" @click="changePage('-')">
-                            &laquo;previous
-                        </button>
-        
-                        <div class="col-3 text-center">
-                            {{ this.currentPage }}
-                        </div>
-        
-                        <button class="col-2" @click="changePage('+')">
-                            next&raquo;
-                        </button>
-        
-                    </div>
-
-                </div>
+                <router-view></router-view>
             </div>
 
 
@@ -140,6 +106,17 @@ export default {
 
 <style lang="scss" scoped>
 
+ 
+    main{
+
+        min-height: 80vh;
+        .sidebar{
+            border: solid 1px rgba($color: #ad2537, $alpha: 1.0);
+            min-height: 80vh;
+            
+        }
+            
+    }
  
 
 </style>
